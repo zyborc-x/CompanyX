@@ -38,8 +38,6 @@ class EmployeeAPI(APIView):
         task = create_employee_task.delay(request.data)
         return Response({"task_id": task.id, "status": "Employee creation is in the progress."})
 
-# =================================================================================================================>
-# =================================================================================================================>
 
 #update view Cond. PUT
     def put(self, request, pk, format=None):
